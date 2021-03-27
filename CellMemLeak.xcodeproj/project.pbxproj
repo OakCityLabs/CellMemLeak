@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		ECF30213260E8343008B765E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF30211260E8343008B765E /* Main.storyboard */; };
 		ECF30215260E8344008B765E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF30214260E8344008B765E /* Assets.xcassets */; };
 		ECF30218260E8344008B765E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF30216260E8344008B765E /* LaunchScreen.storyboard */; };
+		ECF30223260E83D8008B765E /* D1StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30222260E83D8008B765E /* D1StatusItem.swift */; };
+		ECF30228260E85B1008B765E /* ButtonStatusListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30225260E85B1008B765E /* ButtonStatusListCell.swift */; };
+		ECF30229260E85B1008B765E /* ButtonStatusListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30226260E85B1008B765E /* ButtonStatusListConfiguration.swift */; };
+		ECF3022A260E85B1008B765E /* ButtonStatusListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF30227260E85B1008B765E /* ButtonStatusListCell.xib */; };
+		ECF3022E260E85DB008B765E /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = ECF3022D260E85DB008B765E /* Logging */; };
+		ECF30231260E8622008B765E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30230260E8622008B765E /* UIView.swift */; };
+		ECF30234260E8739008B765E /* isMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30233260E8739008B765E /* isMac.swift */; };
+		ECF30237260E8893008B765E /* ServerActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30236260E8893008B765E /* ServerActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		ECF30214260E8344008B765E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECF30217260E8344008B765E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECF30219260E8344008B765E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF30220260E839F008B765E /* CellMemLeak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CellMemLeak.entitlements; sourceTree = "<group>"; };
+		ECF30222260E83D8008B765E /* D1StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D1StatusItem.swift; sourceTree = "<group>"; };
+		ECF30225260E85B1008B765E /* ButtonStatusListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStatusListCell.swift; sourceTree = "<group>"; };
+		ECF30226260E85B1008B765E /* ButtonStatusListConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStatusListConfiguration.swift; sourceTree = "<group>"; };
+		ECF30227260E85B1008B765E /* ButtonStatusListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonStatusListCell.xib; sourceTree = "<group>"; };
+		ECF30230260E8622008B765E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		ECF30233260E8739008B765E /* isMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isMac.swift; sourceTree = "<group>"; };
+		ECF30236260E8893008B765E /* ServerActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF3022E260E85DB008B765E /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +73,17 @@
 		ECF3020A260E8343008B765E /* CellMemLeak */ = {
 			isa = PBXGroup;
 			children = (
+				ECF30220260E839F008B765E /* CellMemLeak.entitlements */,
 				ECF3020B260E8343008B765E /* AppDelegate.swift */,
 				ECF3020D260E8343008B765E /* SceneDelegate.swift */,
 				ECF3020F260E8343008B765E /* ViewController.swift */,
+				ECF30222260E83D8008B765E /* D1StatusItem.swift */,
+				ECF30225260E85B1008B765E /* ButtonStatusListCell.swift */,
+				ECF30227260E85B1008B765E /* ButtonStatusListCell.xib */,
+				ECF30226260E85B1008B765E /* ButtonStatusListConfiguration.swift */,
+				ECF30230260E8622008B765E /* UIView.swift */,
+				ECF30233260E8739008B765E /* isMac.swift */,
+				ECF30236260E8893008B765E /* ServerActivity.swift */,
 				ECF30211260E8343008B765E /* Main.storyboard */,
 				ECF30214260E8344008B765E /* Assets.xcassets */,
 				ECF30216260E8344008B765E /* LaunchScreen.storyboard */,
@@ -83,6 +108,9 @@
 			dependencies = (
 			);
 			name = CellMemLeak;
+			packageProductDependencies = (
+				ECF3022D260E85DB008B765E /* Logging */,
+			);
 			productName = CellMemLeak;
 			productReference = ECF30208260E8343008B765E /* CellMemLeak.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +138,9 @@
 				Base,
 			);
 			mainGroup = ECF301FF260E8343008B765E;
+			packageReferences = (
+				ECF3022C260E85DB008B765E /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
 			productRefGroup = ECF30209260E8343008B765E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF30218260E8344008B765E /* LaunchScreen.storyboard in Resources */,
+				ECF3022A260E85B1008B765E /* ButtonStatusListCell.xib in Resources */,
 				ECF30215260E8344008B765E /* Assets.xcassets in Resources */,
 				ECF30213260E8343008B765E /* Main.storyboard in Resources */,
 			);
@@ -138,6 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF30210260E8343008B765E /* ViewController.swift in Sources */,
+				ECF30223260E83D8008B765E /* D1StatusItem.swift in Sources */,
+				ECF30229260E85B1008B765E /* ButtonStatusListConfiguration.swift in Sources */,
+				ECF30234260E8739008B765E /* isMac.swift in Sources */,
+				ECF30237260E8893008B765E /* ServerActivity.swift in Sources */,
+				ECF30231260E8622008B765E /* UIView.swift in Sources */,
+				ECF30228260E85B1008B765E /* ButtonStatusListCell.swift in Sources */,
 				ECF3020C260E8343008B765E /* AppDelegate.swift in Sources */,
 				ECF3020E260E8343008B765E /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CellMemLeak/CellMemLeak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDMGL459YN;
 				INFOPLIST_FILE = CellMemLeak/Info.plist;
@@ -295,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.CellMemLeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CellMemLeak/CellMemLeak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDMGL459YN;
 				INFOPLIST_FILE = CellMemLeak/Info.plist;
@@ -314,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.oakcity.CellMemLeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECF3022C260E85DB008B765E /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECF3022D260E85DB008B765E /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECF3022C260E85DB008B765E /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECF30200260E8343008B765E /* Project object */;
 }

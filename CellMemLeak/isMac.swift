@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+#if targetEnvironment(macCatalyst)
+let isMac = true
+#else
+let isMac = false
+#endif
