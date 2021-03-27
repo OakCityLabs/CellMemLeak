@@ -14,12 +14,7 @@
 		ECF30215260E8344008B765E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF30214260E8344008B765E /* Assets.xcassets */; };
 		ECF30218260E8344008B765E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF30216260E8344008B765E /* LaunchScreen.storyboard */; };
 		ECF30223260E83D8008B765E /* D1StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30222260E83D8008B765E /* D1StatusItem.swift */; };
-		ECF30228260E85B1008B765E /* ButtonStatusListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30225260E85B1008B765E /* ButtonStatusListCell.swift */; };
-		ECF30229260E85B1008B765E /* ButtonStatusListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30226260E85B1008B765E /* ButtonStatusListConfiguration.swift */; };
-		ECF3022A260E85B1008B765E /* ButtonStatusListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF30227260E85B1008B765E /* ButtonStatusListCell.xib */; };
 		ECF3022E260E85DB008B765E /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = ECF3022D260E85DB008B765E /* Logging */; };
-		ECF30231260E8622008B765E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30230260E8622008B765E /* UIView.swift */; };
-		ECF30234260E8739008B765E /* isMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30233260E8739008B765E /* isMac.swift */; };
 		ECF3023A260F8B8B008B765E /* D1StatusSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30239260F8B8B008B765E /* D1StatusSection.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +29,6 @@
 		ECF30219260E8344008B765E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECF30220260E839F008B765E /* CellMemLeak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CellMemLeak.entitlements; sourceTree = "<group>"; };
 		ECF30222260E83D8008B765E /* D1StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D1StatusItem.swift; sourceTree = "<group>"; };
-		ECF30225260E85B1008B765E /* ButtonStatusListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStatusListCell.swift; sourceTree = "<group>"; };
-		ECF30226260E85B1008B765E /* ButtonStatusListConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStatusListConfiguration.swift; sourceTree = "<group>"; };
-		ECF30227260E85B1008B765E /* ButtonStatusListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonStatusListCell.xib; sourceTree = "<group>"; };
-		ECF30230260E8622008B765E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		ECF30233260E8739008B765E /* isMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isMac.swift; sourceTree = "<group>"; };
 		ECF30239260F8B8B008B765E /* D1StatusSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D1StatusSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,11 +69,6 @@
 				ECF3020F260E8343008B765E /* ViewController.swift */,
 				ECF30222260E83D8008B765E /* D1StatusItem.swift */,
 				ECF30239260F8B8B008B765E /* D1StatusSection.swift */,
-				ECF30225260E85B1008B765E /* ButtonStatusListCell.swift */,
-				ECF30227260E85B1008B765E /* ButtonStatusListCell.xib */,
-				ECF30226260E85B1008B765E /* ButtonStatusListConfiguration.swift */,
-				ECF30230260E8622008B765E /* UIView.swift */,
-				ECF30233260E8739008B765E /* isMac.swift */,
 				ECF30211260E8343008B765E /* Main.storyboard */,
 				ECF30214260E8344008B765E /* Assets.xcassets */,
 				ECF30216260E8344008B765E /* LaunchScreen.storyboard */,
@@ -156,7 +141,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF30218260E8344008B765E /* LaunchScreen.storyboard in Resources */,
-				ECF3022A260E85B1008B765E /* ButtonStatusListCell.xib in Resources */,
 				ECF30215260E8344008B765E /* Assets.xcassets in Resources */,
 				ECF30213260E8343008B765E /* Main.storyboard in Resources */,
 			);
@@ -171,11 +155,7 @@
 			files = (
 				ECF30210260E8343008B765E /* ViewController.swift in Sources */,
 				ECF30223260E83D8008B765E /* D1StatusItem.swift in Sources */,
-				ECF30229260E85B1008B765E /* ButtonStatusListConfiguration.swift in Sources */,
-				ECF30234260E8739008B765E /* isMac.swift in Sources */,
-				ECF30231260E8622008B765E /* UIView.swift in Sources */,
 				ECF3023A260F8B8B008B765E /* D1StatusSection.swift in Sources */,
-				ECF30228260E85B1008B765E /* ButtonStatusListCell.swift in Sources */,
 				ECF3020C260E8343008B765E /* AppDelegate.swift in Sources */,
 				ECF3020E260E8343008B765E /* SceneDelegate.swift in Sources */,
 			);
