@@ -9,19 +9,6 @@
 import UIKit
 
 extension UIView {
-
-    @IBInspectable var cornerRounding: CGFloat {
-        get {
-            return self.layer.cornerRadius
-        }
-        set {
-            self.layer.cornerRadius = newValue
-        }
-    }
-//
-//    var isDarkMode: Bool {
-//        traitCollection.userInterfaceStyle == .dark
-//    }
     
     func addSubViewEdgeToEdge(_ subview: UIView) {
         addSubview(subview)
@@ -35,6 +22,15 @@ extension UIView {
                                                       options: [],
                                                       metrics: nil,
                                                       views: ["subview": subview]))
+    }
+    
+    @IBInspectable var cornerRounding: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+        }
     }
     
     @IBInspectable var borderWidth: CGFloat {

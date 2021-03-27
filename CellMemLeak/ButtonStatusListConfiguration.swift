@@ -15,9 +15,7 @@ struct ButtonStatusListConfiguration: UIContentConfiguration, Hashable {
     let action: UIAction
     let buttonFont: UIFont
     let labelFont: UIFont
-    
-//    var logger = Logger(label: "Callisto.ButtonStatusListConfiguration")
-    
+        
     init(label: String,
          buttonFont: UIFont,
          labelFont: UIFont,

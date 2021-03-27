@@ -47,11 +47,6 @@ class ViewController: UICollectionViewController {
         
         configureDataSource()
         
-//        Timer.publish(every: 1.0,
-//                      tolerance: nil,
-//                      on: RunLoop.main,
-//                      in: .default,
-//                      options: nil)
         Timer.publish(every: 1.0, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] (_) in
@@ -187,7 +182,7 @@ class ViewController: UICollectionViewController {
 extension ViewController {
         
     var serverLogAction: UIAction {
-        return UIAction(title: "Open") { [weak self] (_) in
+        return UIAction(title: "Open") { (_) in
             print("serverLogAction")
         }
     }
@@ -204,16 +199,10 @@ extension ViewController {
             "score": "123",
         ]
         
-//        if let env = d1Server.environmentInfo?.process.environ {
-            let keys = env.keys
-                .sorted { $0.lowercased() < $1.lowercased() }
-            let items = keys.map { D1StatusItem.keyValue($0, env[$0] ?? "") }
-            snapshot.append(items, to: root)
-//        } else {
-//            snapshot.append([
-//                .singleLine("Not Available")
-//            ], to: root)
-//        }
+        let keys = env.keys
+            .sorted { $0.lowercased() < $1.lowercased() }
+        let items = keys.map { D1StatusItem.keyValue($0, env[$0] ?? "") }
+        snapshot.append(items, to: root)
         
         if shouldExpand(section: .environment) {
             snapshot.expand([root])
@@ -235,19 +224,12 @@ extension ViewController {
             "package2": "duper",
             "package3": "booper"
         ]
+                
+        let keys = packages.keys
+            .sorted { $0.lowercased() < $1.lowercased() }
+        let items = keys.map { D1StatusItem.keyValue($0, packages[$0] ?? "") }
+        snapshot.append(items, to: root)
         
-        
-//        if let packages = d1Server.environmentInfo?.python.packages {
-            let keys = packages.keys
-                .sorted { $0.lowercased() < $1.lowercased() }
-            let items = keys.map { D1StatusItem.keyValue($0, packages[$0] ?? "") }
-            snapshot.append(items, to: root)
-//        } else {
-//            snapshot.append([
-//                .singleLine("Packages not available")
-//            ], to: root)
-//        }
-//
         if shouldExpand(section: .packages) {
             snapshot.expand([root])
         } else {
@@ -264,11 +246,6 @@ extension ViewController {
     
         let openCloudVC = UIAction(title: "Cloud Storage") {  _ in
             print("openCloudAction")
-//            let cloudVC = ViewControllerFactory.cloudProvider(sceneEnv: sceneEnv)
-//            cloudVC.delegate = self
-//            let adsf = UINavigationController(rootViewController: cloudVC)
-//            present(adsf,
-//                    animated: true)
         }
         snapshot.append([.buttonValue("Manage", openCloudVC)], to: root)
         if shouldExpand(section: .cloudStorage) {
@@ -293,18 +270,12 @@ extension ViewController {
                                                     loadPercent: 0.1),
                                          gpu: [])
         
-//        if let stat = d1Server.serverActivity {
-            snapshot.append([
-                .singleLine(connectString),
-                .keyValue("CPU", "\(stat.cpu.percent)%"),
-                .keyValue("Memory", "\(stat.memPercentUsed)% used"),
-                .keyValue("Storage", "\(Int(stat.disk.percent))% used")
-            ], to: root)
-//        } else {
-//            snapshot.append([
-//                .singleLine("Activity not available")
-//            ], to: root)
-//        }
+        snapshot.append([
+            .singleLine(connectString),
+            .keyValue("CPU", "\(stat.cpu.percent)%"),
+            .keyValue("Memory", "\(stat.memPercentUsed)% used"),
+            .keyValue("Storage", "\(Int(stat.disk.percent))% used")
+        ], to: root)
         
         if shouldExpand(section: statsSection) {
             snapshot.expand([root])
@@ -321,29 +292,21 @@ extension ViewController {
         
         snapshot.append([root])
         
-//        if let act = d1Server.serverActivity,
-//           let envInfo = d1Server.environmentInfo {
-//
-            //hardware info
-            snapshot.append([
-                .keyValue("CPU Cores", "3.5"),
-                .keyValue("System Memory", "100"),
-                .keyValue("Storage", "200")
-            ], to: root)
-            
-            //software info
-            snapshot.append([.keyValue("Python Version", "123"),
-                             .keyValue("Conda Version", "456"),
-                             .keyValue("OS", "macOS")
-            ], to: root)
-            //log
-            snapshot.append([.buttonValue("View Log", serverLogAction)], to: root)
-            
-//        } else {
-//            snapshot.append([
-//                .singleLine("Info not available")
-//            ], to: root)
-//        }
+        //hardware info
+        snapshot.append([
+            .keyValue("CPU Cores", "3.5"),
+            .keyValue("System Memory", "100"),
+            .keyValue("Storage", "200")
+        ], to: root)
+        
+        //software info
+        snapshot.append([.keyValue("Python Version", "123"),
+                         .keyValue("Conda Version", "456"),
+                         .keyValue("OS", "macOS")
+        ], to: root)
+        //log
+        snapshot.append([.buttonValue("View Log", serverLogAction)], to: root)
+        
         
         if shouldExpand(section: .info) {
             snapshot.expand([root])
