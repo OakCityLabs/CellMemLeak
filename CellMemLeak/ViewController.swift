@@ -263,18 +263,11 @@ extension ViewController {
         
         snapshot.append([root])
         
-        let stat = ServerActivity(timestamp: "Now lol",
-                                         disk: .init(free: 50, percent: 50, total: 100),
-                                         memory: .init(available: 8, total: 16),
-                                         cpu: .init(percent: 10,
-                                                    loadPercent: 0.1),
-                                         gpu: [])
-        
         snapshot.append([
             .singleLine(connectString),
-            .keyValue("CPU", "\(stat.cpu.percent)%"),
-            .keyValue("Memory", "\(stat.memPercentUsed)% used"),
-            .keyValue("Storage", "\(Int(stat.disk.percent))% used")
+            .keyValue("CPU", "88%"),
+            .keyValue("Memory", "68% used"),
+            .keyValue("Storage", "99% used")
         ], to: root)
         
         if shouldExpand(section: statsSection) {
